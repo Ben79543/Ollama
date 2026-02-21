@@ -1,6 +1,12 @@
 # Utilise une image de base légère avec support GPU si nécessaire
 FROM ubuntu:22.04
 
+# Évite les interactions lors de l'installation des paquets
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Configuration de l'hôte pour permettre les connexions externes
+ENV OLLAMA_HOST=0.0.0.0
+
 # Installe les dépendances nécessaires, y compris zstd
 RUN apt-get update && \
     apt-get install -y curl wget git zstd && \
