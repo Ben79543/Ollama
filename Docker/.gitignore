@@ -1,0 +1,10 @@
+# Ignore Docker volumes
+ollama_data/
+
+# Ignore environment files
+.env
+
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+venv/
