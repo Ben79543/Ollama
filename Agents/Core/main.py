@@ -1,4 +1,10 @@
-from chatbot.chatbot import Chatbot
+import sys
+from pathlib import Path
+
+# Ajoute le chemin du projet au PYTHONPATH
+sys.path.append(str(Path(__file__).parent.parent))
+
+from Chatbot.chatbot import Chatbot
 
 def main():
     chatbot = Chatbot()
@@ -12,4 +18,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

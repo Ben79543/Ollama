@@ -1,5 +1,5 @@
-from core.base_agent import BaseAgent
-from config.settings import RAG_DOCUMENTS_PATH
+from Core.base_agent import BaseAgent
+from Config.settings import RAG_DOCUMENTS_PATH
 
 class RagAgent(BaseAgent):
     """Agent spécialisé dans le RAG (Retrieval-Augmented Generation)."""
@@ -10,8 +10,6 @@ class RagAgent(BaseAgent):
 
     def retrieve_documents(self, query: str) -> str:
         """Simule la récupération de documents pertinents (à implémenter)."""
-        # Ici, vous implémenteriez une logique pour récupérer des documents
-        # en fonction de la requête (par exemple, avec FAISS ou ChromaDB).
         return f"Documents pertinents pour: {query}"
 
     def execute(self, task: str) -> str:

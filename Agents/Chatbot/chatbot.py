@@ -1,5 +1,5 @@
-from core.base_agent import BaseAgent
-from child_agents.agent_exemple1.agent import AgentExemple1
+from Core.base_agent import BaseAgent
+from rag_agent.rag_agent import RagAgent
 
 class Chatbot(BaseAgent):
     """Agent principal (chatbot) qui orchestrer les appels aux agents enfants."""
@@ -7,13 +7,13 @@ class Chatbot(BaseAgent):
     def __init__(self):
         super().__init__(name="chatbot")
         self.child_agents = {
-            "exemple1": AgentExemple1()
+            "rag": RagAgent()
         }
 
     def execute(self, user_input: str) -> str:
         """Traite l'entrée utilisateur et délègue aux agents enfants si nécessaire."""
-        if "exemple1" in user_input.lower():
-            return self.child_agents["exemple1"].execute(user_input)
+        if "rag" in user_input.lower():
+            return self.child_agents["rag"].execute(user_input)
         else:
             return self.query_model(f"Réponds à l'utilisateur: {user_input}")
 
