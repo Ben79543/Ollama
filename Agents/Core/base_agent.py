@@ -1,6 +1,8 @@
 from abc import ABC, abstractmethod
 import requests
-from config.settings import OLLAMA_API_URL, MODEL_NAME
+from Config.settings import OLLAMA_API_URL, MODEL_NAME
+
+
 
 class BaseAgent(ABC):
     """Classe de base pour tous les agents."""
