@@ -1,5 +1,0 @@
-requests>=2.31.0
-python-dotenv>=1.0.0
-# Ajoutez d'autres dépendances pour le RAG si nécessaire (FAISS, ChromaDB, etc.)
-# faiss-cpu>=1.7.4
-# chromadb>=0.4.10
