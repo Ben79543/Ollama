@@ -37,6 +37,9 @@ RUN chown -R ollama:ollama /home/ollama
 # Passage en utilisateur non-root
 USER ${APP_UID}:${APP_GID}
 
+# Télécharge et installe Ollama
+RUN curl -fsSL https://ollama.com/install.sh | sh
+
 # Port exposé
 EXPOSE 11434
 
