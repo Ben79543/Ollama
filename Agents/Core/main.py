@@ -4,7 +4,7 @@ from pathlib import Path
 # Ajoute le chemin du projet au PYTHONPATH
 sys.path.append(str(Path(__file__).parent.parent))
 
-from Chatbot.Chatbot import Chatbot
+from Chatbot.chatbot import Chatbot
 
 def main():
     chatbot = Chatbot()
